@@ -1,0 +1,9 @@
+delete from respuestas where idRespuesta>0;
+delete from enunciados where idEnunciado>0;
+delete from examenes where idExamen>0;
+delete from maestros where idMaestro>0;
+
+alter table respuestas AUTO_INCREMENT=1;
+alter table enunciados AUTO_INCREMENT=1;
+alter table examenes AUTO_INCREMENT=1;
+alter table maestros AUTO_INCREMENT=1;

@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin    : 0;
+  padding   : 0;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar:hover {
+}
+body::-webkit-scrollbar-track {
+    background-color: rgba(53,57,61,1) ;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #C0C0C0;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #9D9FB2;
+}
+body::-webkit-scrollbar-thumb:active {
+    background-color: #373763;
+}
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body,html{
+  font-family    : "Poppins", 'Roboto Condensed', sans-serif;
+  font-size      : 15px;
+  width          : 100%;
+  background-size: 100% 100%;
+  min-height     : 100vh;
+}
+
+body {
+  background-color     : lightgray;
+  background-repeat    : no-repeat;
+  background-attachment: fixed;
+
+}
+.navbar-sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1020; /* Ensure it appears above other content */
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.is-required:before {
+  content    : '*';
+  margin-left: 3px;
+  color      : red;
+  font-weight: bold;
+}
+.FOTO{
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px white;
+  object-fit: cover;
+}
+.div_foto{
+    text-align: center;
+}
+.stroke {
+  font-size: 100px;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  text-shadow: #F77676 5px 5px;
+}
+
+
+
+.img_languajes{
+/*  width        : 100px;*/
+  height       : 100px;
+  margin-bottom: 15px;
+}
+
+.progress-nav{
+  position: sticky;
+  top: 68px;
+  width: 100%;
+  background-color: black;
+  height: 10px;
+  z-index: 2;
+
+  animation: progress-nav-frame auto linear;  /* ANIMACIÓN */
+  animation-timeline: scroll(root block);
+}
+/*
+.card {
+    transition: 1.5s ease;
+    animation: card-show linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    overflow: hidden; 
+
+    & .list_skills {
+        margin-bottom: 0;
+        height: auto;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden; 
+        transition: 0.75s ease;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: gray;
+        background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+        box-shadow: 0 0 10px black;
+        z-index: 1;
+        transition-timing-function: cubic-bezier(0.74, 0.21, 0.78, 1.39);
+        transition: 1s ease;
+
+        & .list_skills {
+            max-height: 200px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        & .progress-bar {
+            transition: background-color 1s;
+            background-color: blue;
+            animation: show-progress linear both;
+            animation-duration: 700ms;
+        }
+
+
+    }
+
+}*/
+
+.card {
+    transition: 1.5s ease;
+    animation: card-show linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    overflow: hidden;
+    position: relative;
+
+    & .list_skills {
+        margin-bottom: 0;
+        height: auto;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+    }
+    & .cont_arrow{
+        position: relative;
+
+        & .arrow {
+            opacity: 0.6;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid black;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+    }
+
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: gray;
+        background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+        box-shadow: 0 0 10px black;
+        z-index: 1;
+        transition-timing-function: cubic-bezier(0.74, 0.21, 0.78, 1.39);
+        transition: 2s ease;
+
+        & .list_skills {
+            max-height: 200px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &:hover > .card-body > .progress > .progress-bar {
+        transition: background-color 1s;
+        background-color: blue;
+        animation: show-progress linear both;
+        animation-duration: 700ms;
+    }
+
+    &.open .list_skills {
+        max-height: 200px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.open .arrow {
+        transform: translateX(-50%) rotate(180deg);
+    }
+}
+
+
+
+
+.text-services{
+  animation         : show-text linear both;  /* ANIMACIÓN */
+  animation-timeline: view();
+  animation-range   : entry 20% cover 30%;
+/*  animation-delay   : 2s;*/
+/*  background-color  : black;*/
+}
+.img_show-perspective{
+/*  perspective: 800px;*/
+
+  & .img_show{
+    animation: show-images linear both;         
+    animation-timeline : view();
+    animation-range    : entry 0% cover 30%;
+/*    transform: rotateY(-25deg) ;*/
+  }
+}
+
+
+
+.conocimientos_habilidades{
+    margin-top: 75px;
+}
+.progress-bar:hover{
+  width: 100%;
+}
+
+
+
+
+#loading {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+    z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#loading .spinner {
+    margin: 0 auto 20px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+#loading p {
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out infinite;
+}
+
+
+
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+.timeline li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #007BFF; /* Color de la línea */
+}
+.timeline li:last-child {
+    margin-bottom: 0;
+}
+.timeline h4, .timeline h6 {
+    margin: 0;
+}
+.timeline p {
+    margin-top: 5px;
+}
+
+.linkedin{
+    margin-top: 140px;
+}
+.text-container{
+
+    & p{
+        display: inline;
+    }
+    & a{
+        color: #0E007A;
+    }
+}
+
+
+.language-card {
+    width: 200px; /* Ancho de cada tarjeta */
+    margin-right: 20px; /* Margen entre tarjetas */
+}
+.scroll-wrapper {
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap; /* Evitar salto de línea */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+
+.project-item {
+    margin-bottom: 40px; /* Espaciado entre proyectos */
+}
+.project-item img {
+    width: 100%; /* Imágenes al 100% del contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+}
+.project-item .project-info {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+.project-item .project-info h3 {
+    margin-top: 0; /* Eliminar margen superior del título */
+}
+.img_proyecto{
+    width: 100%;
+/*    height: 400px;*/
+}
+
+.service-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.service-box h3 {
+    margin-top: 0;
+}
+.service-box p {
+    margin-bottom: 15px;
+}
+
+
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-ellipse {
+    background-color: #16395E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-ellipse:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
