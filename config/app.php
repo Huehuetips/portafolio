@@ -3,8 +3,7 @@
 	//configuración de URL Y APLICACIÓN//
 	/////////////////////////////////////
 
-	// const APP_URL="http://localhost/portafolio/";
-	const APP_URL="https://amontejodev-4067a71eeace.herokuapp.com/";
+	const APP_URL="http://localhost/portafolio/";
 	const APP_NAME="Adony Montejo";
 	const NAME_ENG="Adony Montejo";
 	const APP_SESSION_NAME="PIXELWORKS";
