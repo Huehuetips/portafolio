@@ -10,7 +10,6 @@
 
 	//CONFIGURACIÓN DE RUTAS
 	const APP_LOGO=APP_URL."app/views/img/Logo.webp";
-	const APP_PHOTO=APP_URL."app/views/img/photos/";
 	const APP_IMAGEN=APP_URL."app/views/img/";
 
 	//CONFIGURACIÓN DE FORMULARIOS
@@ -19,8 +18,8 @@
 
 	//CONFIGURACIÓN DE ENCRIPTACIÓN
 	const METHOD="AES-256-CBC";
-	const SECRET_KEY='$PORTAFOLIO@ADONY'; //comillas simples para evitar interpretación como variable
-	const SECRET_IV="5969";
+	const SECRET_KEY=''; //comillas simples para evitar interpretación como variable
+	const SECRET_IV="";
 
 
 	date_default_timezone_set("America/Guatemala");

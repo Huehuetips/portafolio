@@ -1,9 +1,9 @@
 <?php 
 
-	const DB_PORT=3306;
-	const DB_SERVER="localhost";
-	const DB_NAME="portafolio";
-	const DB_USER="root";
-	const DB_PASS="root";
+	const DB_PORT=;
+	const DB_SERVER="";
+	const DB_NAME="";
+	const DB_USER="";
+	const DB_PASS="";
 
  ?>
