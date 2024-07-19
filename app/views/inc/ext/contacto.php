@@ -4,7 +4,7 @@
         <h2>Contacto</h2>
         <div class="" role="group">
             <a href="https://linkedin.com/in/adonyMontejo" target="_blank" class="btn btn-ellipse"> <span class="text-primary"><i class="bi bi-linkedin"></i></span> Linkedin</a>
-            <a href="mailto:eadony35@gmail.com" target="_blank" class="btn btn-ellipse"> <span class="text-warning"><i class="bi bi-envelope-at"></i></span> Gmail</a>
+            <a href="mailto:contact@emontejodev.com" target="_blank" class="btn btn-ellipse"> <span class="text-warning"><i class="bi bi-envelope-at"></i></span> Gmail</a>
             <a href="https://wa.me/50259692780" target="_blank" class="btn btn-ellipse"> <span class="text-success"><i class="bi bi-whatsapp"></i></span> Whatsapp</a>
             <a href="https://github.com/Huehuetips" target="_blank" class="btn btn-ellipse"> <span><i class="bi bi-github"></i></span> GitHub</a>
             <a href="https://es.stackoverflow.com/users/303939/adony-montejo" target="_blank" class="btn btn-ellipse"> <span class="text-danger"><i class="bi bi-stack-overflow"></i></span> Stack Overflow</a>

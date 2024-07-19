@@ -63,7 +63,7 @@
 
 			
 			$Msg=$this->MessageTypeMail("Contact");
-			$mailValidate=$this->enviarCorreo($email,$Msg,"Gracias por tu comentario");
+			$mailValidate=$this->enviarCorreo($email,$Msg,"Gracias por tu comentario", "no-reply");
 
 			if (is_null($mailValidate)) {
 				$alert=[
@@ -93,7 +93,7 @@
 			];
 
 			$Msg=$this->MessageTypeMail("msgToMe",$dataMail);
-			$mailValidate=$this->enviarCorreo("sendmail3535@gmail.com",$Msg,"Nuevo Mensaje de la página");
+			$mailValidate=$this->enviarCorreo("emontejodev@emontejodev.com",$Msg,"Nuevo Mensaje de la página", "emontejodev");
 
 			if (is_null($mailValidate)) {
 				$alert=[
@@ -117,33 +117,33 @@
 				exit();
 			}
 
-			// $fields =[ #CAMPOS DE REGISTRO DEL QUERY
-	 	 	// 	[
-			// 		"field_name"  =>"pMessageEmail",
-			// 		"field_mark"  =>":pMessageEmail",
-			// 		"field_value" =>$email
-	 	 	// 	],
-	 	 	// 	[
-			// 		"field_name"  =>"pMessageContent",
-			// 		"field_mark"  =>":pMessageContent",
-			// 		"field_value" =>$message
-	 	 	// 	],
-	 	 	// ];
-			// $Msg=$this->queSP("InsertMessage",$fields);
+			$fields =[ #CAMPOS DE REGISTRO DEL QUERY
+	 	 		[
+					"field_name"  =>"pMessageEmail",
+					"field_mark"  =>":pMessageEmail",
+					"field_value" =>$email
+	 	 		],
+	 	 		[
+					"field_name"  =>"pMessageContent",
+					"field_mark"  =>":pMessageContent",
+					"field_value" =>$message
+	 	 		]
+	 	 	];
+			$Msg=$this->queSP("InsertMessage",$fields);
 
-			// if (empty($Msg)) {
+			if (empty($Msg)) {
 
-	 	 	// 	$alert=[
-			// 		"type"     =>"pop-up",
-			// 		"title"    =>"ERROR",
-			// 		"text"     =>"Lo sentimos, el mensaje solo se ha guardado temporalmente, tendrá una respuesta muy pronto",
-			// 		"icon"     =>"error",
-			// 		"position" =>"bottom-end"
-			// 	];
+	 	 		$alert=[
+					"type"     =>"pop-up",
+					"title"    =>"ERROR",
+					"text"     =>"Lo sentimos, el mensaje solo se ha guardado temporalmente, tendrá una respuesta muy pronto",
+					"icon"     =>"error",
+					"position" =>"bottom-end"
+				];
 
-			// 	return json_encode($alert);
-			// 	exit();
-	 	 	// }
+				return json_encode($alert);
+				exit();
+	 	 	}
 
 			$alert=[
 				"type"     =>"clean",

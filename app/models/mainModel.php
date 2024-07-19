@@ -6,7 +6,6 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
-
 	if(file_exists(__DIR__."/../../config/server.php")){
 		require_once __DIR__."/../../config/server.php";
 	}
@@ -191,7 +190,7 @@
 		    return $color;
 		}
 
-		protected function enviarCorreo($correo, $texto, $asunto) {
+		protected function enviarCorreo($correo, $texto, $asunto, $nom_emisor) {
 		    $mail = new PHPMailer(true);
 		    try {
 		        $mail->CharSet = 'UTF-8'; // Establecer la codificación del correo a UTF-8
@@ -208,7 +207,7 @@
 		        $mail->Port = 587;
 
 		        // Configuración del correo
-		        $mail->setFrom('sendmail3535@gmail.com', NAME_ENG);
+		        $mail->setFrom('emontejodev@emontejodev.com', $nom_emisor);
 		        $mail->addAddress($correo);
 
 		        // Contenido del correo

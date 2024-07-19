@@ -3,7 +3,7 @@
 	//configuración de URL Y APLICACIÓN//
 	/////////////////////////////////////
 
-	const APP_URL="https://emontejodev.com/";
+	const APP_URL="http://localhost/portafolio/";
 	const APP_NAME="Adony Montejo";
 	const NAME_ENG="Adony Montejo";
 	const APP_SESSION_NAME="PIXELWORKS";
@@ -17,9 +17,9 @@
 
 
 	//CONFIGURACIÓN DE ENCRIPTACIÓN
-	const METHOD="";
-	const SECRET_KEY=''; //comillas simples para evitar interpretación como variable
-	const SECRET_IV="";
+	const METHOD="AES-256-CBC";
+	const SECRET_KEY='$PORTAFOLIO@ADONY'; //comillas simples para evitar interpretación como variable
+	const SECRET_IV="5969";
 
 
 	date_default_timezone_set("America/Guatemala");
