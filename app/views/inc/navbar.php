@@ -22,6 +22,27 @@
           <a class="nav-link" href="<?php echo APP_URL; ?>#contact">CONTACTO</a>
         </li>
       </ul>
+      <div class="d-flex">
+        <?php if (!isset($_SESSION['User']) || empty($_SESSION['User'])) { ?> 
+          <a class="dropdown-item" href="<?php echo APP_URL."LOGIN"; ?>">Iniciar Sesión</a>
+        <?php } else{ ?>
+          <ul class="d-flex navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="btn-group dropstart">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item" href="<?php echo APP_URL."userUpdate/".$_SESSION["User"]->userId; ?>">Mi Cuenta</a></li>
+                  <li><a class="dropdown-item" href="<?php echo APP_URL."userList"; ?>">Usuarios</a></li>
+                  <li><a class="dropdown-item" href="<?php echo APP_URL."userForm"; ?>">Agregar Usuario</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="<?php echo APP_URL."logOut"; ?>"><i class="bi bi-box-arrow-in-right"></i> Cerrar Sesion</a></li>
+              </ul>
+            </li>
+          </ul>
+        <?php } ?>
+      </div>
     </div>
   </div>
 </nav>

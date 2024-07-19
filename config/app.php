@@ -3,7 +3,7 @@
 	//configuración de URL Y APLICACIÓN//
 	/////////////////////////////////////
 
-	const APP_URL="http://localhost/portafolio/";
+	const APP_URL="https://emontejodev.com/";
 	const APP_NAME="Adony Montejo";
 	const NAME_ENG="Adony Montejo";
 	const APP_SESSION_NAME="PIXELWORKS";
@@ -17,7 +17,7 @@
 
 
 	//CONFIGURACIÓN DE ENCRIPTACIÓN
-	const METHOD="AES-256-CBC";
+	const METHOD="";
 	const SECRET_KEY=''; //comillas simples para evitar interpretación como variable
 	const SECRET_IV="";
 

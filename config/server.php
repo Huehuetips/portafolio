@@ -1,6 +1,6 @@
 <?php 
 
-	const DB_PORT=;
+	const DB_PORT=0;
 	const DB_SERVER="";
 	const DB_NAME="";
 	const DB_USER="";
